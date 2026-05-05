@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="/favicon.png?v=1">
+
+<title>Kodėl mineralinis po vakarėlio ne visada padeda | Sveikas Rytojus</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #1a2340;
+    --gold: #c8a96e;
+    --gold-light: #e8d4a8;
+    --soft: #f0ece3;
+    --text-dark: #1a1a1a;
+    --text-mid: #3d3d3d;
+    --text-light: #6b6b6b;
+    --rule: #d4cfc4;
+    --accent-blue: #2c4a7c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #ffffff;
+    color: var(--text-dark);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  .top-bar {
+    background: var(--navy);
+    color: rgba(255,255,255,0.65);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .top-bar span { color: rgba(255,255,255,0.9); }
+
+  .masthead {
+    background: #ffffff;
+    border-bottom: 2px solid var(--navy);
+    padding: 26px 40px 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .masthead-brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .masthead-sub {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-top: 6px;
+  }
+
+  .masthead-tag {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: var(--navy);
+    padding: 6px 14px;
+    white-space: nowrap;
+  }
+
+  .hero-image {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 80px;
+    overflow: hidden;
+    background: #f6f3ec;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .image-placeholder {
+    max-width: 760px;
+    margin: 34px auto;
+    padding: 26px 24px;
+    background: #f6f3ec;
+    border: 1px dashed var(--rule);
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .image-placeholder strong {
+    display: block;
+    color: var(--navy);
+    font-size: 14px;
+    font-style: normal;
+    margin-bottom: 6px;
+  }
+
+  .category-label {
+    text-align: center;
+    padding: 32px 20px 8px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .main-headline {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .main-headline h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.18;
+    margin-bottom: 8px;
+  }
+
+  .main-headline h1 em {
+    font-style: italic;
+    color: var(--navy);
+  }
+
+  .headline-deck {
+    font-size: 18px !important;
+    color: var(--text-mid) !important;
+    line-height: 1.65 !important;
+    margin: 20px auto 16px !important;
+    max-width: 680px;
+    font-weight: 300;
+  }
+
+  .headline-author {
+    font-size: 11px !important;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-light) !important;
+    margin: 0 !important;
+  }
+
+  .headline-author strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 44px 22px 78px;
+  }
+
+  .article-wrap p {
+    font-size: 18px;
+    line-height: 1.82;
+    color: var(--text-mid);
+    margin-bottom: 21px;
+  }
+
+  .article-wrap p strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .article-wrap h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 48px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid var(--navy);
+    line-height: 1.28;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 42px 0;
+  }
+
+  .pull-quote {
+    border-left: 3px solid var(--navy);
+    padding: 6px 0 6px 26px;
+    margin: 32px 0;
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 21px !important;
+    font-style: italic;
+    color: var(--navy) !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+  }
+
+  .callout {
+    background: var(--soft);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--navy);
+    padding: 24px 28px;
+    margin: 34px 0;
+  }
+
+  .callout-label {
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .callout p {
+    font-size: 16.5px !important;
+    color: var(--text-dark) !important;
+    margin: 0 !important;
+    line-height: 1.72 !important;
+  }
+
+  .mini-list {
+    margin: 28px 0 34px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .mini-list-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 0;
+  }
+
+  .mini-list-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+
+  .mini-list-item p {
+    font-size: 16.5px !important;
+    margin: 0 !important;
+    color: var(--text-mid) !important;
+  }
+
+  .soft-cta {
+    border: 1px solid var(--navy);
+    padding: 22px 26px;
+    margin: 36px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    background: var(--soft);
+  }
+
+  .soft-cta-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px !important;
+    font-style: italic;
+    color: var(--navy) !important;
+    margin: 0 !important;
+    line-height: 1.42 !important;
+  }
+
+  .soft-cta-button {
+    flex-shrink: 0;
+    display: inline-block;
+    background: var(--navy);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    text-decoration: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .soft-cta-button:hover { background: var(--accent-blue); }
+
+  .steps {
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--navy);
+    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .step-content h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: var(--navy);
+  }
+
+  .step-content p {
+    font-size: 16.5px !important;
+    margin: 0 !important;
+  }
+
+  .testimonial {
+    background: var(--soft);
+    border: 1px solid var(--rule);
+    padding: 32px 34px;
+    margin: 38px 0;
+    position: relative;
+  }
+
+  .testimonial::before {
+    content: '“';
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 92px;
+    color: var(--gold-light);
+    position: absolute;
+    top: -12px;
+    left: 22px;
+    line-height: 1;
+  }
+
+  .testimonial p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px !important;
+    font-style: italic;
+    color: var(--navy) !important;
+    line-height: 1.62 !important;
+    margin: 0 0 16px !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-author {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .rec-box {
+    border: 1px solid var(--rule);
+    margin: 46px auto 0;
+    max-width: 500px;
+    text-align: center;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .rec-box-top {
+    padding: 28px 38px 10px;
+    background: #ffffff;
+  }
+
+  .rec-label {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .rec-stars {
+    font-size: 22px;
+    color: #c9a84c;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+
+  .rec-rating {
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .rec-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .rec-product-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .rec-box-bottom {
+    padding: 24px 38px 30px;
+    background: #ffffff;
+  }
+
+  .rec-bullets {
+    list-style: none;
+    text-align: left;
+    margin: 0 auto 24px;
+    display: inline-block;
+  }
+
+  .rec-bullets li {
+    font-size: 15.5px;
+    color: var(--text-mid);
+    padding: 5px 0 5px 28px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .rec-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .rec-button {
+    display: block;
+    background: var(--navy);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 18px 30px;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-bottom: 12px;
+  }
+
+  .rec-button:hover { background: var(--accent-blue); }
+
+  .rec-sub {
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 13px;
+  }
+
+  .rec-disclaimer {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 0.04em;
+  }
+
+  .closing-italic {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 21px !important;
+    color: var(--navy) !important;
+    text-align: center;
+    margin: 38px 0 !important;
+  }
+
+  .disclaimer {
+    border-top: 1px solid var(--rule);
+    padding: 28px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .disclaimer p {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 640px) {
+    .masthead {
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .masthead-brand { font-size: 26px; }
+    .masthead-tag { display: none; }
+
+    .main-headline {
+      padding: 0 20px 32px;
+    }
+
+    .main-headline h1 { font-size: 30px; }
+    .headline-deck { font-size: 17px !important; }
+
+    .article-wrap {
+      padding: 36px 20px 60px;
+    }
+
+    .article-wrap p { font-size: 17px; }
+    .article-wrap h2 { font-size: 24px; }
+
+    .hero-image img { height: 250px; }
+
+    .soft-cta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .soft-cta-button {
+      width: 100%;
+      text-align: center;
+    }
+
+    .rec-box-bottom,
+    .rec-box-top {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  /* ONLY the 4 article CTA buttons */
+  .soft-cta-button {
+    background: #24345f;
+  }
+
+  .soft-cta-button:hover {
+    background: #314579;
+  }
+
+
+  /* Final product CTA button color */
+  .rec-button {
+    background: #24345f;
+  }
+
+  .rec-button:hover {
+    background: #314579;
+  }
+
+</style>
+</head>
+
+<body>
+
+
+<div class="masthead">
+  <div>
+    <div class="masthead-brand">Sveikas Rytojus</div>
+    <div class="masthead-sub">Sveikata. Rytas. Kontrolė.</div>
+  </div>
+  <div class="masthead-tag">Reklaminė medžiaga</div>
+</div>
+
+<!-- NUOTRAUKA 1: vyras ant sofos. Hero nuotrauka. Čia turi būti stipriausia problemos nuotrauka. -->
+<div class="hero-image">
+  <div class="image-placeholder">
+    <strong>NUOTRAUKA 1 ČIA</strong>
+    Vyras ant sofos ryte. Hero vaizdas, kuris iškart parodo problemą: viena naktis pavogė kitą dieną.
+  </div>
+</div>
+
+<div class="category-label">Sveikata &amp; Gyvenimo būdas</div>
+
+<div class="main-headline">
+  <h1>Kodėl mineralinis po vakaro su alkoholiu <em>ne visada padeda</em> - ir ką daryti, kad rytas būtų lengvesnis</h1>
+  <p class="headline-deck">Jei po vakaro geri mineralinį, kavą, bandai išsimiegoti, bet vis tiek atsikeli sunkiai - problema dažnai yra platesnė nei paprastas troškulys.</p>
+  <p class="headline-author">Sveikas Rytojus &nbsp;·&nbsp; <strong>Redakcinė komanda</strong> &nbsp;·&nbsp; 2026</p>
+</div>
+
+<div class="article-wrap">
+
+  <p>Pažįstamas jausmas: vakaras buvo geras, bet ryte galva sunki, burna sausa, skrandis jautrus, o diena dar tik prasidėjo.</p>
+
+  <p>Dauguma pirmiausia griebiasi mineralinio. Ir taip, jis padeda. Bet jei kitą rytą vis tiek jauti pagirias - problema nėra vien skysčiai.</p>
+
+  <div class="pull-quote">
+    <p>Blogiausia ne pats vakaras. Blogiausia, kai pagirios sugadina visą dieną.</p>
+  </div>
+
+  <h2>Mineralinis padeda troškuliui. Bet ne savijautai.</h2>
+
+  <p>Po alkoholio organizmas ne tik netenka skysčių. Jis taip pat dirba su alkoholio apykaita, miego kokybe ir mineralų balansu.</p>
+
+  <p>Štai kodėl išgerus skysčių, pamiegojus ilgiau, savijauta ryte vis tiek prasta.</p>
+
+  <!-- NUOTRAUKA 2: Vytautas / mineralinis. Tik čia, prie mineralinio temos. -->
+  <div class="image-placeholder">
+    <strong>NUOTRAUKA 2 ČIA</strong>
+    Mineralinis / Vytautas. Dėti tik prie dalies apie vandenį, kad logiškai sustiprintų mintį: mineralinis padeda, bet ne viskam.
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Esmė</div>
+    <p>Mineralinis yra naudinga dalis. Bet jis nėra visas sprendimas. Jei nori lengvesnio ryto, reikia galvoti ne tik apie troškulį, bet ir apie tai, kaip palaikyti organizmą iš vakaro.</p>
+  </div>
+
+  <h2>Kodėl įprasti metodai dažnai nepadeda</h2>
+
+  <div class="mini-list">
+    <div class="mini-list-item">
+      <div class="mini-list-title">Mineralinis</div>
+      <p>Padeda atstatyti skysčius, bet nesprendžia viso organizmo krūvio.</p>
+    </div>
+
+    <div class="mini-list-item">
+      <div class="mini-list-title">Kava</div>
+      <p>Trumpam suteikia energijos, bet dažnai tik užmaskuoja nuovargį.</p>
+    </div>
+
+    <div class="mini-list-item">
+      <div class="mini-list-title">Miegas</div>
+      <p>Būtinas, bet po alkoholio jis dažnai nėra toks kokybiškas.</p>
+    </div>
+  </div>
+
+  <p>Ir čia atsiranda paprasta išvada: <strong>jei problema formuojasi naktį, ją logiškiausia spręsti ne ryte, o prieš miegą.</strong></p>
+
+  <hr class="divider">
+
+  <h2>Kada pagirios labiausiai kenkia?</h2>
+
+  <p>Ne tada, kai kitą dieną gali ramiai gulėti lovoje. O tada, kai rytoj vis tiek turi darbų ir įsipareigojimų.</p>
+
+  <p>Darbas. Vaikai. Kelionė. Sportas. Sekmadienio planai.</p>
+
+  <p>Būtent tokiais momentais žmonės ir pradeda ieškoti ne stebuklo, o paprasto būdo mažiau kentėti kitą rytą.</p>
+
+  <div class="soft-cta">
+    <p class="soft-cta-text">Jei rytoj turi planų, pasiruošk iš vakaro.</p>
+    <a href="https://pagirioms.lt/products/hangover-restore" class="soft-cta-button">SUŽINOTI DAUGIAU →</a>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Sprendimas: Pasirūpinti kita diena iš vakaro</h2>
+
+  <p>Hangover Restore™ yra maisto papildas, sukurtas vartoti vakare po alkoholio - po paskutinio gėrimo arba prieš miegą.</p>
+
+  <p>Idėja paprasta: ne laukti, kol rytas jau bus sunkus, o palaikyti organizmą tada, kai jis dar tik tvarkosi su vakaro pasekmėmis.</p>
+
+  <p>Tai nėra leidimas gerti daugiau. Tai sprendimas žmonėms, kurie nori pasilinksminti, bet nenori prarasti visos kitos dienos.</p>
+
+  <!-- NUOTRAUKA 3: Įprastas planas / protingas sprendimas. Čia labai tinka, nes jau pristatytas sprendimas. -->
+  <div class="image-placeholder">
+    <strong>NUOTRAUKA 3 ČIA</strong>
+    „Įprastas planas“ vs „Protingas sprendimas“. Dėti po sprendimo pristatymo, kad vizualiai parodytų skirtumą tarp senų metodų ir produkto.
+  </div>
+
+  <div class="soft-cta">
+    <p class="soft-cta-text">Vakaras gali būti spontaniškas. Rytas - suplanuotas.</p>
+    <a href="https://pagirioms.lt/products/hangover-restore" class="soft-cta-button">SUŽINOTI DAUGIAU →</a>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Kaip tai veikia praktiškai?</h2>
+
+  <p>Nėra nieko sudėtingo.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Vakare</h3>
+        <p>Išgerkite 3 kapsules su vandeniu po paskutinio gėrimo arba prieš miegą.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Naktį</h3>
+        <p>Kol ilsitės, organizmas dirba. Formulė skirta palaikyti kūną atsistatant.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>Ryte</h3>
+        <p>Tikslas - lengvesnė dienos pradžia, kai negali gulėti lovoje visą dieną.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Kas sudėtyje?</h2>
+
+  <p>Formulėje yra DHM, L-Cisteinas, pieno usnis, dygliuotoji kriaušė, imbieras, vitaminai ir elektrolitai. Kitaip tariant - ne vien mineralai, o platesnė formulė, palaikyti organizmui.</p>
+
+  <p>Ji sukurta tiems, kurie nori pasirūpinti savo kūnu po alkoholio vartojimo.</p>
+
+  <!-- NUOTRAUKA 4: ingredientų vizualas. Čia geriausia vieta, nes tekstas kalba apie sudėtį. -->
+  <div class="image-placeholder">
+    <strong>NUOTRAUKA 4 ČIA</strong>
+    Ingredientų vizualas. Dėti po trumpo sudėties paaiškinimo kaip pasitikėjimo / credibility dalį.
+  </div>
+
+  <div class="soft-cta">
+    <p class="soft-cta-text">36 kapsulės - 12 vakarų. Patogu turėti prieš savaitgalį.</p>
+    <a href="https://pagirioms.lt/products/hangover-restore" class="soft-cta-button">IŠBANDYTI DABAR →</a>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Ar verta?</h2>
+
+  <p>Jei kitą dieną gali tiesiog gulėti - gal ir ne. Bet jei rytoj laukia darbai, šeima, planai ar kelionė, prarasta diena kainuoja daugiau nei atrodo.</p>
+
+  <p>Diena gyvenimo ar 3€, tavo pasirinkimas.</p>
+
+  <!-- NUOTRAUKA 5: 1 diena gyvenimo / 3€ už rytą. Dėti tik čia, nes čia kalbama apie vertę. -->
+  <div class="image-placeholder">
+    <strong>NUOTRAUKA 5 ČIA</strong>
+    „1 diena gyvenimo“ / „3€ už rytą“. Dėti arti pabaigos, kai skaitytojas jau supranta problemą ir sprendimą.
+  </div>
+
+  <div class="testimonial">
+    <p>„Žiūrėjau skeptiškai, nes tokių dalykų paprastai neperku. Bet po pirmo karto supratau viena - kitam vakarui norisi turėti po ranka.“</p>
+    <div class="testimonial-author">— Tomas, 37 m., Kaunas</div>
+  </div>
+
+  <p class="closing-italic">Mėgaukis vakaru. Neaukok visos kitos dienos.</p>
+
+  <div class="rec-box">
+    <div class="rec-box-top">
+      <div class="rec-label">Rekomenduojame išbandyti</div>
+      <div class="rec-stars">★★★★★</div>
+      <div class="rec-rating">4.8 · 70+ atsiliepimų</div>
+      <div class="rec-name">Hangover Restore™</div>
+    </div>
+
+    <div class="rec-product-img">
+      <!-- NUOTRAUKA 6: final produkto nuotrauka su ikonėlėmis. Čia, final produkto bloke. -->
+      <div class="image-placeholder">
+        <strong>NUOTRAUKA 6 ČIA</strong>
+        Final produkto nuotrauka su ikonėlėmis: 12 dozių, natūrali sudėtis, DHM 1200mg, be cukraus.
+      </div>
+    </div>
+
+    <div class="rec-box-bottom">
+      <ul class="rec-bullets">
+        <li>Vartojama vakare po alkoholio</li>
+        <li>36 kapsulės - 12 vakarų</li>
+        <li>DHM, L-Cisteinas, augaliniai ekstraktai</li>
+        <li>Patogu turėti prieš savaitgalį ar šventę</li>
+      </ul>
+
+      <a href="https://pagirioms.lt/products/hangover-restore" class="rec-button">IŠBANDYTI DABAR →</a>
+      <p class="rec-sub">Sutaupykite iki 30% perkant daugiau</p>
+      <div class="rec-disclaimer">Oficiali parduotuvė Lietuvoje · Maisto papildas</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="disclaimer">
+  <p>Šis straipsnis yra reklaminė medžiaga. Hangover Restore™ yra maisto papildas. Maisto papildas nėra vaistas ir nėra skirtas ligoms gydyti, diagnozuoti ar jų profilaktikai. Rezultatai gali skirtis individualiai. Vartokite atsakingai ir pagal etiketėje pateiktas rekomendacijas. Jei vartojate vaistus, turite sveikatos sutrikimų, esate nėščia ar žindote - prieš vartojimą pasitarkite su gydytoju. Laikyti vaikams nepasiekiamoje vietoje. Alkoholis kenkia sveikatai.</p>
+</div>
+
+</body>
+</html>
